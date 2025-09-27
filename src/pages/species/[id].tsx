@@ -1,13 +1,12 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import DashboardLayout from "../../components/organisms/DashboardLayout";
-import { ArrowLeftIcon } from "../../assets/icons";
+import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
 import { fetchSpecie } from "../../services/swapi";
 import { Species } from "@/types/swapi";
+import BackButton from "../../components/molecules/BackButton/BackButton";
 
 export default function SpeciesDetail() {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [species, setSpecies] = useState<Species | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,13 +67,7 @@ export default function SpeciesDetail() {
     <DashboardLayout>
       <>
         <div className="block md:hidden mb-6">
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2 border border-grey-400 px-6 py-2 rounded-lg text-gray-600 hover:text-gray-800 transition-colors"
-          >
-            <ArrowLeftIcon size={10} />
-            Back
-          </button>
+          <BackButton />
         </div>
         <div className="flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-1/3 ">

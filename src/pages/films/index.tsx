@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchFilms, fetchResourceCounts } from "../../services/swapi";
-import DashboardLayout from "../../components/organisms/DashboardLayout";
-import SummaryCard from "../../components/molecules/SummeryCards";
+import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
+import SummaryCard from "../../components/molecules/SummeryCard/SummeryCards";
 import MobileFilmCard from "../../components/molecules/MobileFilmCard";
 import ResourceTable from "../../components/molecules/ResourceTable/ResourceTable";
 import {

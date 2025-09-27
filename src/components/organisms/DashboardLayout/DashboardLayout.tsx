@@ -1,5 +1,5 @@
-import Sidebar from "./Sidebar/Sidebar";
-import Topbar from "./Topbar";
+import Sidebar from "../Sidebar/Sidebar";
+import Topbar from "../Topbar/Topbar";
 import { ReactNode } from "react";
 
 interface Props {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchSpecies } from "../../services/swapi";
-import DashboardLayout from "../../components/organisms/DashboardLayout";
+import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
 import ResourceTable from "../../components/molecules/ResourceTable/ResourceTable";
 import MobileResourceCard from "../../components/molecules/MobileResourceCard/MobileResourceCard";
 import { MobileCardSkeleton } from "../../components/atoms/SkeletonLoader/SkeletonLoader";

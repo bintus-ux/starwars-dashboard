@@ -1,5 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { UserIcon, NotificationIcon, ArrowLeftIcon } from "../../assets/icons";
+import {
+  UserIcon,
+  NotificationIcon,
+  ArrowLeftIcon,
+} from "../../../assets/icons";
 
 export default function Topbar() {
   const location = useLocation();
