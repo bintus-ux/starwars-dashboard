@@ -1,3 +1,5 @@
+import { UseFormRegisterReturn } from "react-hook-form";
+
 export interface ResourceCounts {
   films: number;
   starships: number;
@@ -43,3 +45,10 @@ export interface Starship {
   passengers: string;
   pilots: [];
 }
+
+export type FloatingInputProps = {
+  label: string;
+  type?: string;
+  registration: UseFormRegisterReturn;
+  error?: string;
+};

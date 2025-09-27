@@ -46,14 +46,15 @@ export default function Login() {
       <div className="w-full md:w-[70%] flex justify-center items-center px-4 ">
         <div className="w-full max-w-md flex flex-col space-y-6 bg-white p-8 rounded-lg  border border-[#A4A7B74D] shadow-sm">
           <div>
-            <h2 className="text-2xl font-semibold mb-2">Login</h2>
-            <p className="text-[#737373] text-md mb-8">
+            <h2 className="text-[24px] text-[#434854] font-semibold leading-[32px] mb-2">
+              Login
+            </h2>
+            <p className="font-medium text-[#737373] text-[16px] mb-8 leading-[24px]">
               Kindly enter your details to log in
             </p>
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-            {/* Email */}
             <FloatingInput
               label="Email Address"
               type="email"
@@ -61,7 +62,6 @@ export default function Login() {
               error={errors.email?.message}
             />
 
-            {/* Password */}
             <FloatingInput
               label="Password"
               type="password"
@@ -69,7 +69,6 @@ export default function Login() {
               error={errors.password?.message}
             />
 
-            {/* Submit */}
             <button
               type="submit"
               className="w-full bg-[#0A74DC] text-white py-2 rounded-md font-medium hover:bg-blue-700 transition-colors"
@@ -81,7 +80,7 @@ export default function Login() {
           <div className="text-center mt-6">
             <a
               href="#"
-              className="text-md text-blue-600 hover:underline font-medium"
+              className="text-[14px] text-[#0A74DC] leading-[16px] hover:underline font-medium"
             >
               Forgot your password?
             </a>
@@ -91,7 +90,7 @@ export default function Login() {
             <a href="#" className="underline text-black">
               Privacy Policy
             </a>{" "}
-            <span className="text-gray-500">and</span>{" "}
+            <span className="text-[#B0B9C8]">and</span>{" "}
             <a href="#" className="underline text-black">
               Terms of Service
             </a>

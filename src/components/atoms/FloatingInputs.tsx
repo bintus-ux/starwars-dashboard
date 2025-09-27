@@ -1,11 +1,5 @@
-import { UseFormRegisterReturn } from "react-hook-form";
-
-type FloatingInputProps = {
-  label: string;
-  type?: string;
-  registration: UseFormRegisterReturn;
-  error?: string;
-};
+import "./floating-input.css";
+import { FloatingInputProps } from "../../types/swapi";
 
 export default function FloatingInput({
   label,
@@ -14,21 +8,16 @@ export default function FloatingInput({
   error,
 }: FloatingInputProps) {
   return (
-    <div className="relative w-full">
+    <div
+      className={`did-floating-label-content ${error ? "did-error-input" : ""}`}
+    >
       <input
         type={type}
         {...registration}
         placeholder=" "
-        className="peer w-full border px-3 pt-4 pb-2 rounded-sm
-                   focus:outline-none focus:ring-2 focus:ring-[#0A74DC]"
+        className="did-floating-input"
       />
-      <label
-        className="absolute left-3 top-[-7px] text-[#B0B9C8] text-sm transition-all
-                   peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400
-                   peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-sm peer-focus:text-blue-500"
-      >
-        {label}
-      </label>
+      <label className="did-floating-label">{label}</label>
       {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
     </div>
   );
