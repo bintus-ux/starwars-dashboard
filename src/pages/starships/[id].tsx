@@ -2,9 +2,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
 import { fetchStarship } from "../../services/swapi";
-import { ArrowLeftIcon } from "../../assets/icons";
 import { Starship } from "../../types/swapi";
-import BackButton from "../../components/molecules/BackButton/BackButton";
+import BackButton from "../../components/atoms/Button/BackButton/BackButton";
 
 export default function StarshipDetail() {
   const { id } = useParams();

@@ -1,9 +1,4 @@
-interface ButtonProps {
-  children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline";
-  onClick?: () => void;
-  className?: string;
-}
+import { ButtonProps } from "../../../types/swapi";
 
 export default function Button({
   children,

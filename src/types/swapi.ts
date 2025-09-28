@@ -52,3 +52,18 @@ export type FloatingInputProps = {
   registration: UseFormRegisterReturn;
   error?: string;
 };
+
+export interface SummaryCardProps {
+  title: string;
+  count: number;
+  change: number;
+  icon?: string;
+  onClick?: () => void;
+}
+
+export interface ButtonProps {
+  children: React.ReactNode;
+  variant?: "primary" | "secondary" | "outline";
+  onClick?: () => void;
+  className?: string;
+}

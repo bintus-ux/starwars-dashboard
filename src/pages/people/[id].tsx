@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
 import { fetchPerson } from "../../services/swapi";
 import { Person } from "../../types/swapi";
-import BackButton from "../../components/molecules/BackButton/BackButton";
+import BackButton from "../../components/atoms/Button/BackButton/BackButton";
 
 export default function PersonDetail() {
   const { id } = useParams();

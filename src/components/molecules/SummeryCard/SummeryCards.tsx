@@ -1,11 +1,4 @@
-// components/molecules/SummaryCard.tsx
-interface SummaryCardProps {
-  title: string;
-  count: number;
-  change: number;
-  icon?: string;
-  onClick?: () => void;
-}
+import { SummaryCardProps } from "../../../types/swapi";
 
 export default function SummaryCard({
   title,

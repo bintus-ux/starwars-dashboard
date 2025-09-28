@@ -1,6 +1,6 @@
-import Button from "../../atoms/Button/Button";
+import Button from "../Button";
 import { useNavigate } from "react-router-dom";
-import ArrowLeftIcon from "../../../assets/icons/ArrowLeftIcon";
+import { ArrowLeftIcon } from "../../../../assets/icons";
 
 export default function BackButton() {
   const navigate = useNavigate();

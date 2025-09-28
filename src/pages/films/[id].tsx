@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
 import { fetchFilm } from "../../services/swapi";
 import { Film } from "../../types/swapi";
-import BackButton from "../../components/molecules/BackButton/BackButton";
+import BackButton from "../../components/atoms/Button/BackButton/BackButton";
 
 export default function FilmDetail() {
   const { id } = useParams();
