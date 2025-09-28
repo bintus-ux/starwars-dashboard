@@ -72,51 +72,52 @@ export default function Species() {
 
   return (
     <DashboardLayout>
-      <div className="bg-white shadow rounded-lg overflow-hidden">
-        <div className="p-6 border-b">
+      <div className="bg-white">
+        <div className="py-6">
           <h2 className="text-xl text-[#A4A7B7] font-semibold">Species</h2>
         </div>
+        <div className="overflow-hidden md:shadow md:rounded-lg ">
+          {!isMobile && (
+            <div className="hidden md:block">
+              <ResourceTable
+                columns={speciesColumns}
+                data={species}
+                loading={loading}
+                onRowClick={handleSpeciesClick}
+                renderRow={renderSpeciesRow}
+              />
+            </div>
+          )}
 
-        {!isMobile && (
-          <div className="hidden md:block">
-            <ResourceTable
-              columns={speciesColumns}
-              data={species}
-              loading={loading}
-              onRowClick={handleSpeciesClick}
-              renderRow={renderSpeciesRow}
-            />
-          </div>
-        )}
+          {isMobile && (
+            <div className="md:hidden">
+              {loading ? (
+                <>
+                  <MobileCardSkeleton />
+                  <MobileCardSkeleton />
+                  <MobileCardSkeleton />
+                  <MobileCardSkeleton />
+                </>
+              ) : (
+                species.map((specie, index) => (
+                  <MobileResourceCard
+                    key={index}
+                    item={specie}
+                    onClick={() => handleSpeciesClick(specie)}
+                    fields={speciesFields}
+                    titleField="name"
+                  />
+                ))
+              )}
+            </div>
+          )}
 
-        {isMobile && (
-          <div className="md:hidden p-4">
-            {loading ? (
-              <>
-                <MobileCardSkeleton />
-                <MobileCardSkeleton />
-                <MobileCardSkeleton />
-                <MobileCardSkeleton />
-              </>
-            ) : (
-              species.map((specie, index) => (
-                <MobileResourceCard
-                  key={index}
-                  item={specie}
-                  onClick={() => handleSpeciesClick(specie)}
-                  fields={speciesFields}
-                  titleField="name"
-                />
-              ))
-            )}
-          </div>
-        )}
-
-        {!loading && species.length === 0 && (
-          <div className="p-8 text-center text-gray-500">
-            No species data found
-          </div>
-        )}
+          {!loading && species.length === 0 && (
+            <div className="p-8 text-center text-gray-500">
+              No species data found
+            </div>
+          )}
+        </div>
       </div>
     </DashboardLayout>
   );

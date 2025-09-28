@@ -129,13 +129,13 @@ export default function Overview() {
         )}
       </div>
 
-      <div className="bg-white shadow rounded-lg overflow-hidden">
-        <div className="p-6 border-b">
+      <div className="bg-white ">
+        <div className="py-6">
           <h1 className="text-xl text-[#A4A7B7] font-semibold">Films</h1>
         </div>
 
         {!isMobile && (
-          <div className="hidden md:block">
+          <div className="hidden md:block md:shadow md:rounded-lg ">
             <ResourceTable
               columns={filmColumns}
               data={films}
@@ -147,7 +147,7 @@ export default function Overview() {
         )}
 
         {isMobile && (
-          <div className="md:hidden p-4">
+          <div className="md:hidden">
             {loading.films ? (
               <>
                 <MobileCardSkeleton />

@@ -72,13 +72,13 @@ export default function People() {
 
   return (
     <DashboardLayout>
-      <div className="bg-white shadow rounded-lg overflow-hidden">
-        <div className="p-6 border-b">
+      <div className="bg-white">
+        <div className="py-6">
           <h2 className="text-xl text-[#A4A7B7] font-semibold">People</h2>
         </div>
 
         {!isMobile && (
-          <div className="hidden md:block">
+          <div className="hidden md:block md:shadow md:rounded-lg">
             <ResourceTable
               columns={peopleColumns}
               data={people}
@@ -90,7 +90,7 @@ export default function People() {
         )}
 
         {isMobile && (
-          <div className="md:hidden p-4">
+          <div className="md:hidden">
             {loading ? (
               <>
                 <MobileCardSkeleton />
