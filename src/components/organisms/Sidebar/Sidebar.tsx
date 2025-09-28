@@ -33,7 +33,7 @@ export default function Sidebar() {
       </button>
 
       <aside
-        className={`fixed top-0 left-0 h-full w-64 md:w-[19.5vw] bg-[#031434] text-white flex flex-col p-6
+        className={`sidebar fixed top-0 left-0 h-full w-64 lg:w-[19.5vw] bg-[#031434] text-white flex flex-col p-6
           transform transition-transform duration-300 ease-in-out z-40
           ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
@@ -75,7 +75,7 @@ export default function Sidebar() {
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}

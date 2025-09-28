@@ -8,7 +8,7 @@ interface Props {
 
 export default function DashboardLayout({ children }: Props) {
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-white">
       <Sidebar />
 
       <div className="flex flex-col flex-1 overflow-hidden">

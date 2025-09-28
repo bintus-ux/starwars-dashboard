@@ -1,5 +1,10 @@
 import { UseFormRegisterReturn } from "react-hook-form";
 
+export type FormData = {
+  email: string;
+  password: string;
+};
+
 export interface ResourceCounts {
   films: number;
   starships: number;
