@@ -5,12 +5,12 @@ import {
   Navigate,
 } from "react-router-dom";
 import Login from "./pages/Login";
-import Overview from "./pages/films";
-import Starships from "./pages/starships/starships";
-import Species from "./pages/species/species";
+import Overview from "./pages/overview";
+import Starships from "./pages/starships";
+import Species from "./pages/species";
 import SpeciesDetail from "./pages/species/[id]";
-import People from "./pages/people/people";
-import FilmDetail from "./pages/films/[id]";
+import People from "./pages/people";
+import FilmDetail from "./pages/overview/[id]";
 import PersonDetail from "./pages/people/[id]";
 import StarshipDetail from "./pages/starships/[id]";
 

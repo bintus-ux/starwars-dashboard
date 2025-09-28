@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import FloatingInput from "../components/atoms/FloatingInputs";
+import FloatingInput from "../../components/atoms/FloatingInputs";
 
 const schema = yup.object({
   email: yup.string().email("Invalid email").required("Email is required"),
