@@ -9,7 +9,7 @@ import {
   SummaryCardSkeleton,
   MobileCardSkeleton,
 } from "../../components/atoms/SkeletonLoader/SkeletonLoader";
-import { ResourceCounts } from "@/types/swapi";
+import { ResourceCounts } from "@/types/types";
 
 export default function Overview() {
   const [films, setFilms] = useState<any[]>([]);

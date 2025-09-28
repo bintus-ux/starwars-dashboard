@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
 import { fetchFilm } from "../../services/swapi";
-import { Film } from "../../types/swapi";
+import { Film } from "../../types/types";
 import BackButton from "../../components/atoms/Button/BackButton/BackButton";
 
 export default function FilmDetail() {

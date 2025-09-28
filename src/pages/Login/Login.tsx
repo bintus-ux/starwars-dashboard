@@ -3,7 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import FloatingInput from "../../components/atoms/FloatingInputs";
-import { FormData } from "../../types/swapi";
+import { FormData } from "../../types/types";
 
 const schema = yup.object({
   email: yup.string().email("Invalid email").required("Email is required"),
@@ -30,19 +30,19 @@ export default function Login() {
   };
 
   return (
-    <div className="flex h-screen">
-      <div className="hidden md:flex w-[30%] bg-[#031434] justify-center items-center">
+    <div className="flex justify-center mx-auto  h-screen">
+      <div className="hidden md:flex w-[30%] bg-[#031434] justify-center items-center aside-hidden">
         <img
           src="/images/logo.png"
           alt="Star Wars Logo"
-          className="max-w-xs md:max-w-md object-contain"
+          className="max-w-xs object-contain"
         />
       </div>
 
       <div className="w-full md:w-[70%] flex justify-center items-center px-4">
         <div className="w-full max-w-md flex flex-col bg-white p-8 rounded-lg border border-[#A4A7B74D] shadow-sm min-h-[50vh]">
           <div className="flex-grow">
-            <div className="mb-8">
+            <div className="text-center md:text-left mb-8">
               <h2 className="text-[24px] text-[#434854] font-semibold leading-[32px] mb-2">
                 Login
               </h2>

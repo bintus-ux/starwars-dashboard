@@ -1,5 +1,5 @@
 import "./floating-input.css";
-import { FloatingInputProps } from "../../types/swapi";
+import { FloatingInputProps } from "../../types/types";
 
 export default function FloatingInput({
   label,

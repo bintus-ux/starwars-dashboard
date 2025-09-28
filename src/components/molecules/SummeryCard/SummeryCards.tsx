@@ -1,4 +1,4 @@
-import { SummaryCardProps } from "../../../types/swapi";
+import { SummaryCardProps } from "../../../types/types";
 
 export default function SummaryCard({
   title,

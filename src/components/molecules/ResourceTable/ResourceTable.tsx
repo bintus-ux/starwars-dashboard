@@ -1,5 +1,5 @@
 import { TableRowSkeleton } from "../../atoms/SkeletonLoader/SkeletonLoader";
-import { ResourceTableProps } from "../../../types/swapi";
+import { ResourceTableProps } from "../../../types/types";
 
 export default function ResourceTable({
   columns,

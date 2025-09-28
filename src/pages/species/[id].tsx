@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import DashboardLayout from "../../components/organisms/DashboardLayout/DashboardLayout";
 import { fetchSpecie } from "../../services/swapi";
-import { Species } from "@/types/swapi";
+import { Species } from "../../types/types";
 import BackButton from "../../components/atoms/Button/BackButton/BackButton";
 
 export default function SpeciesDetail() {
