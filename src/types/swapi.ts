@@ -12,6 +12,14 @@ export interface ResourceCounts {
   species: number;
 }
 
+export interface ResourceTableProps {
+  columns: string[];
+  data: any[];
+  loading: boolean;
+  onRowClick: (item: any) => void;
+  renderRow: (item: any, index: number) => React.ReactNode;
+}
+
 export interface Film {
   title: string;
   episode_id: number;

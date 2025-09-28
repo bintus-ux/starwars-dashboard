@@ -1,12 +1,5 @@
 import { TableRowSkeleton } from "../../atoms/SkeletonLoader/SkeletonLoader";
-
-interface ResourceTableProps {
-  columns: string[];
-  data: any[];
-  loading: boolean;
-  onRowClick: (item: any) => void;
-  renderRow: (item: any, index: number) => React.ReactNode;
-}
+import { ResourceTableProps } from "../../../types/swapi";
 
 export default function ResourceTable({
   columns,
@@ -19,7 +12,6 @@ export default function ResourceTable({
     <table className="w-full">
       <thead className="bg-gray-50">
         <tr>
-          {/* Add an empty header cell for checkbox column */}
           <th className="w-10 p-4">
             <input
               type="checkbox"
@@ -54,7 +46,6 @@ export default function ResourceTable({
               className="hover:bg-gray-50 cursor-pointer transition-colors"
               onClick={() => onRowClick(item)}
             >
-              {/* Checkbox cell */}
               <td className="p-4">
                 <input
                   type="checkbox"
@@ -62,7 +53,6 @@ export default function ResourceTable({
                 />
               </td>
 
-              {/* Your dynamic row renderer */}
               {renderRow(item, index)}
             </tr>
           ))
